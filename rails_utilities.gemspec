@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Contains utility functions for Rails.}
   spec.description   = %q{This gem contains methods that extend basic string and integer functionalities. It also includes validators for email and contact number validation}
-  spec.homepage      = "https:bizongo.in" # Put your gem's website or public repo URL here.
+  spec.homepage      = "https://bizongo.in" # Put your gem's website or public repo URL here.
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
