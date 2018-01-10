@@ -69,6 +69,7 @@ Usage: <br/>
 `"bat".prepend_a_or_an # Returns a new string "a bat"`
 
 **strip_country_code**
+
 Return type: String <br/>
 Description: Method that returns a new string with "+91" removed from the calling string if the string that this method is called on starts with "+91" (India's country code for telephone numbers). It does not change the original string. <br/>
 Usage: <br/>
