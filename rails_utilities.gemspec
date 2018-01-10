@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["khandelwal.anuj14@gmail.com"]
 
   spec.summary       = %q{Contains utility functions for Rails.}
-  spec.description   = %q{This gem contains methods that extend basic string and integer functionalities. It also includes validators for email and contact number validation}
+  spec.description   = %q{This gem contains methods that extend functionalities of Ruby objects. Apart from that, it also contains some general utility methods that could be helpful for any Ruby/Rails developer}
   spec.homepage      = "https://bizongo.in" # Put your gem's website or public repo URL here.
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
