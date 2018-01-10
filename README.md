@@ -28,9 +28,9 @@ Objects have been extended with the following methods:
 
 **true?**
 
-Return type: Boolean <br/><br/>
-Method to check if the value of an object is set to true either in a string or as a boolean. It returns true if the object being checked is equal to "true" or true. <br/><br/>
-Usage: <br/><br/>
+Return type: Boolean <br/>
+Method to check if the value of an object is set to true either in a string or as a boolean. It returns true if the object being checked is equal to "true" or true. <br/>
+Usage: <br/>
 `someObject.true?`
 
 **false?**
