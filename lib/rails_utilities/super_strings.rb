@@ -8,6 +8,7 @@ class String
   end
 
   def prepend_a_or_an
+    return self if self[0].is_i?
     %w(a e i o u).include?(self[0].downcase) ? "an #{self}" : "a #{self}"
   end
 

@@ -1,4 +1,3 @@
-
 RSpec.describe "Super object functions" do
 
   context "Checking true?" do
