@@ -80,8 +80,8 @@ Usage: <br/>
 Return type: String<br/>
 Description: Method that returns a new string with n number of digit after decimal.Default this method return 2 digit after decimal.<br/> 
 Usage: <br/>
-2.0.displayed_with_exact_precision # Returns a new string "2.00"
-2.3334.displayed_with_exact_precision # Returns a new string "2.33"
+2.0.displayed_with_exact_precision # Returns a new string "2.00"<br/>
+2.3334.displayed_with_exact_precision # Returns a new string "2.33"<br/>
 2.333434324.displayed_with_exact_precision(4) # Returns a new string "2.3334"
 
 
