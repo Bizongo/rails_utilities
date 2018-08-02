@@ -75,11 +75,11 @@ Description: Method that returns a new string with "+91" removed from the callin
 Usage: <br/>
 `"+919999999999".strip_country_code # Returns a new string "9999999999"`
 
-displayed_with_exact_precision
+**displayed_with_exact_precision**
 
-Return type: String 
-Description: Method that returns a new string with n number of digit after decimal.Default this method return 2 digit after decimal. 
-Usage: 
+Return type: String<br/>
+Description: Method that returns a new string with n number of digit after decimal.Default this method return 2 digit after decimal.<br/> 
+Usage: <br/>
 2.0.displayed_with_exact_precision # Returns a new string "2.00"
 2.3334.displayed_with_exact_precision # Returns a new string "2.33"
 2.333434324.displayed_with_exact_precision(4) # Returns a new string "2.3334"
