@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Methods and Usage
 
-This gem extends Ruby datatypes as follows:
+This gem extends Ruby datatypes and adds utility classes as follows:
 
 ### Objects
 
@@ -78,12 +78,31 @@ Usage: <br/>
 **displayed_with_exact_precision**
 
 Return type: String<br/>
-Description: Method that returns a new string with n number of digit after decimal.Default this method return 2 digit after decimal.<br/> 
+Description: Method that returns a new string with n number of digit after decimal.Default this method return 2 digit after decimal.<br/>
 Usage: <br/>
 2.0.displayed_with_exact_precision # Returns a new string "2.00"<br/>
 2.3334.displayed_with_exact_precision # Returns a new string "2.33"<br/>
 2.333434324.displayed_with_exact_precision(4) # Returns a new string "2.3334"
 
+### AmountToInrWords
+
+`AmountToInrWords` class gives following utility methods
+
+1. amount_to_inr_words
+
+This method returns a string with amount converted to words in Indian Rupee Locale
+
+```
+AmountToInrWords.amount_to_inr_words(1234)
+// "One Thousand Two Hundred And Thirty Four"
+
+AmountToInrWords.amount_to_inr_words(1234.4)
+// "One Thousand Two Hundred And Thirty Four And Forty Paise"
+
+AmountToInrWords.amount_to_inr_words(1234.04)
+// "One Thousand Two Hundred And Thirty Four And Four Paise"
+
+```
 
 ## Contributing
 
