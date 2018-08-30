@@ -34,8 +34,7 @@ RSpec.describe "Amount to INR Words functions" do
       expect(AmountToInrWords.amount_to_inr_words(1234.999)).to eq("One Thousand Two Hundred And Thirty Five")
       expect(AmountToInrWords.amount_to_inr_words(99.995)).to eq("One Hundred")
       expect(AmountToInrWords.amount_to_inr_words(1000.019)).to eq("One Thousand And Two Paise")
-      expect(AmountToInrWords.amount_to_inr_words("01.999")).to eq("Two")
-      expect(AmountToInrWords.amount_to_inr_words("1.1.1.")).to eq("Two")      
+      expect(AmountToInrWords.amount_to_inr_words("01.999")).to eq("Two")      
     end
   end
 

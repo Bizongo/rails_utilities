@@ -1,38 +1,45 @@
+# This is an extension to an existing gem code (https://github.com/railsfactory-shiv/rupees/blob/master/lib/rupees.rb)
+# This code fixes spelling mistakes and formatting issues and adds paise words logic to the original code
+
 class AmountToInrWords
   class << self
     def amount_to_inr_words(amount)
-      result = ""
-
       amount = amount.to_f.round(2)
       num = amount.to_s.split(".")[0].to_i
       decimal = amount.to_s.split(".")[1]
+      result = getNumberInWords(num, decimal) + getDecimalInWords(decimal)
+      result
+    end
 
-      if num > 99
-      s = num.to_s.rjust(11,'0').insert(-4,'0').scan(/../)
-      s.each_with_index{ |x,i|
-        if i == s.count - 1 && decimal.to_i == 0 && x.to_i != 0 
-          result += " And#{def_calc(x,i)}"
-        else
-          result += def_calc(x,i)
-        end
-      }
+    private
+
+    def getNumberInWords(num, decimal)
+      words = ""
+      if num.between?(0, 99)
+        words = spell_two_digits(num)
       else
-       result = spell_two_digits(num)
+        s = num.to_s.rjust(11,'0').insert(-4,'0').scan(/../)
+        s.each_with_index{ |x,i|
+          if i == s.count - 1 && decimal.to_i == 0 && x.to_i != 0
+            words += " And#{def_calc(x,i)}"
+          else
+            words += def_calc(x,i)
+          end
+        }
       end
+      words.strip()
+    end
 
-      result = result.strip()
-
+    def getDecimalInWords(decimal)
+      words = ""
       if decimal.to_i > 0
         if decimal.length == 1
           decimal = (decimal + "0").to_i
         end
-        result += " And #{spell_two_digits(decimal.to_i)} Paise"
+        words += " And #{spell_two_digits(decimal.to_i)} Paise"
       end
-
-      return result.strip()
+      words
     end
-
-    private
 
     def def_calc(x,i)
       str=proc_unit(x)
